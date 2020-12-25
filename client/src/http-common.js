@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const IP = '54.172.34.181';
+const IP = '3.85.15.36';
 const PORT = '8080'
 
 export default axios.create({
