@@ -1,11 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const dotenv = require('dotenv');
+
 
 const app = express();
+dotenv.config({ path: './config.env' })
 
 var corsOptions = {
-  origin: "http://54.172.34.181:3000"
+  origin: `${process.env.URL}:${process.env.PORT}`
 };
 
 app.use(cors(corsOptions));
