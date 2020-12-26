@@ -1,14 +1,28 @@
 # reactjs-nodejs-ec2-deployment
 deploy react js and nodejs project in ec2
 
+# deploy Service in EC2
+### Run script.sh file
 
-## Run Nodejs in Pm2
- `` pm2 start npm --name "backend" -- start ``
+go to root directory & simply run 
 
+`` sh script.sh ``
 
-cd .. && cd client
+when script completed
 
-npm run build
+go to 
 
-echo "Run React Build in Pm2"
-pm2 serve build 3000 --spa --name "frontEnd" 
+client -> src -> 
+
+change file name called ``` http-common.js ```
+
+open file with nano editior
+
+`` nano http-common.js ``
+
+Change IP = 'your instance public Ip'
+
+after that restart pm2 
+
+`` pm2 restart frontEnd ``
+
